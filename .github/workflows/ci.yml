@@ -34,7 +34,5 @@ jobs:
       parent_branch_name: ${{ github.ref_name }}
     # predefined actions are hosted - everyone who uses this will use the checkout command so 
     # created checkout ocmmand to see - actions is actually a repo
-
-
     
 

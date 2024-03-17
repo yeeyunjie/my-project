@@ -2,7 +2,7 @@
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-gradle
 
 name: CI Pipeline
-run-name: Deployed in $GITHUB_REPOSITORY	 # by default its the commit message
+run-name: Deployed in ${{ github.event.repository.name }}	 # by default its the commit message
 env:
   BRANCH_NAME: ${{ github.base_ref || github.ref_name }}
   REPO_NAME: ${{ github.event.repository.name }}
@@ -24,6 +24,7 @@ jobs:
         echo "github event repo name - ${{ github.event.repository.name }}"
         echo "BRANCH_NAME - $BRANCH_NAME"
         echo "GITHUB_REPOSITORY - ${GITHUB_REPOSITORY}"
+        echo "REPO_NAME - ${REPO_NAME}"
 
   build:
     # runs-on: ubuntu-latest

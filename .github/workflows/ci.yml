@@ -28,7 +28,10 @@ jobs:
 
   build:
     # runs-on: ubuntu-latest
-    uses: yeeyunjie/my-workflows/.github/workflows/build.yaml@${REPO_NAME}
+    uses: yeeyunjie/my-workflows/.github/workflows/build.yaml@my-project
+    with:
+      parent_repo_name: ${{ github.event.repository.name }}
+      parent_branch_name: ${{ github.ref_name }}
     # predefined actions are hosted - everyone who uses this will use the checkout command so 
     # created checkout ocmmand to see - actions is actually a repo
 

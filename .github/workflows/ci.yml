@@ -31,6 +31,11 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
 
+  post-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List files  
+        run: ls -lrta
     # - name: Build and Push Docker Image
     #   uses: mr-smithers-excellent/docker-build-push@v4
     #   with:

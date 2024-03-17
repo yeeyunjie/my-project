@@ -14,7 +14,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    uses: yeeyunjie/my-workflows/pipelines/ci/build.yaml@${github.ref_name}
+    uses: yeeyunjie/my-workflows/.github/workflows/pipelines/ci/build.yaml@${github.ref_name}
     # predefined actions are hosted - everyone who uses this will use the checkout command so 
     # created checkout ocmmand to see - actions is actually a repo
+    
     

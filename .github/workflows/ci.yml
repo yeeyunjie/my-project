@@ -26,7 +26,7 @@ jobs:
 
   build:
     # runs-on: ubuntu-latest
-    uses: yeeyunjie/my-workflows/.github/workflows/build.yaml${{ github.event.repository.name }}
+    uses: yeeyunjie/my-workflows/.github/workflows/build.yaml${REPO_NAME}}
     # predefined actions are hosted - everyone who uses this will use the checkout command so 
     # created checkout ocmmand to see - actions is actually a repo
 

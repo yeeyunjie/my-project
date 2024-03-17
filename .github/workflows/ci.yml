@@ -23,7 +23,7 @@ jobs:
         echo "BRANCH_NAME - $BRANCH_NAME"
 
   build:
-    runs-on: ubuntu-latest
+    # runs-on: ubuntu-latest
     uses: yeeyunjie/my-workflows/.github/workflows/build.yaml@my-project
     # predefined actions are hosted - everyone who uses this will use the checkout command so 
     # created checkout ocmmand to see - actions is actually a repo

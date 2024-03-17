@@ -7,10 +7,10 @@ env:
   BRANCH_NAME: ${{ github.base_ref || github.ref_name }}
 on:
   workflow_call:
-  # push:
-  #   branches: [ master ]
-  # pull_request:
-  #   branches: [ master ]
+    push:
+      branches: [ master ]
+    pull_request:
+      branches: [ master ]
 
 jobs:
   pre-build:

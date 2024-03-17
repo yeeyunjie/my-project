@@ -1,8 +1,8 @@
 # This workflow will build a Java project with Gradle
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-gradle
 
-name: Java CI Pipeline
-run-name: Deploy by @${{ github.actor }} # by default its the commit message
+name: CI Pipeline
+run-name: Deployed in $GITHUB_REPOSITORY	 # by default its the commit message
 env:
   BRANCH_NAME: ${{ github.base_ref || github.ref_name }}
   REPO_NAME: ${{ github.event.repository.name }}
@@ -26,7 +26,7 @@ jobs:
 
   build:
     # runs-on: ubuntu-latest
-    uses: yeeyunjie/my-workflows/.github/workflows/build.yaml${REPO_NAME}
+    uses: yeeyunjie/my-workflows/.github/workflows/build.yaml@${{ github.event.repository.name }}
     # predefined actions are hosted - everyone who uses this will use the checkout command so 
     # created checkout ocmmand to see - actions is actually a repo
 

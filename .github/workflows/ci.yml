@@ -5,8 +5,9 @@ name: Java CI Pipeline
 run-name: Deploy by @${{ github.actor }} # by default its the commit message
 env:
   BRANCH_NAME: ${{ github.base_ref || github.ref_name }}
+# on: [push, pull_request]
 on:
-  workflow_call:
+  # # workflow_call:
     push:
       branches: [ master ]
     pull_request:

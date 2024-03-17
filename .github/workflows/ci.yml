@@ -3,6 +3,8 @@
 
 name: Java CI Pipeline
 run-name: Deploy by @${{ github.actor }} # by default its the commit message
+env:
+  BRANCH_NAME: ${{ github.base_ref || github.ref_name }}
 on:
   push:
     branches: [ master ]
@@ -12,7 +14,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    uses: yeeyunjie/my-workflows/pipelines/ci/build.yaml@${GITHUB_REF##*/}
+    uses: yeeyunjie/my-workflows/pipelines/ci/build.yaml@${BRANCH_NAME}
     # predefined actions are hosted - everyone who uses this will use the checkout command so 
     # created checkout ocmmand to see - actions is actually a repo
     
